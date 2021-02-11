@@ -9,6 +9,7 @@ import Menu from './components/Menu'
 import ToastListener from './components/ToastListener'
 import PageLoader from './components/PageLoader'
 import Pools from './views/Pools'
+import twopac from './assets/img/twopac.png';
 
 // Route-based code splitting
 // Only pool is included in the main bundle because of it's the most visited page'
@@ -41,6 +42,8 @@ const App: React.FC = () => {
   useFetchProfile()
 
   return (
+    <div>
+      <img alt='logo' src={twopac} />
     <Router>
       <ResetCSS />
       <GlobalStyle />
@@ -88,7 +91,8 @@ const App: React.FC = () => {
       </Menu>
       <ToastListener />
     </Router>
+    </div>
   )
-}
+};
 
 export default React.memo(App)
